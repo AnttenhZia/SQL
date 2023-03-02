@@ -1,0 +1,38 @@
+--- Create a Top clothing brand database 
+
+CREATE TABLE clothing_brand (id integer PRIMARY KEY, Brand TEXT, Brand_Value INTEGER, rate Integer, Favorite Text);
+
+INSERT INTO clothing_brand VALUES
+(001, "Nike", 36.8, 7.5, "Yes"),
+(002, "Louis_Vuitton", 32.3, 5.5, "No"),
+(003, "Hermes", 18.3, 6.5, "Yes"),
+(004, "Gucci", 18.2, 6, "Yes"),
+(005, "Zalando", 17.9, 8, "No"),
+(006, "Adidas", 16.2, 7, "No"),
+(007, "Tiffany & Co", 15.2, 8, "Yes"),
+(008, "Zara", 13.5, 7, "Yes"),
+(009, "H&M", 11.5, 9, "No"),
+(010, "Cartier", 10.7, 6, "No"),
+(011, "Lululemon", 9.6, 8, "No"),
+(012, "Moncler", 9.2, 7, "No"),
+(013, "Chanel", 9.1, 6, "Yes"),
+(014, "Rolex", 9.1, 8, "Yes"),
+(015, "Prada", 8.8, 7, "No");
+
+SELECT * FROM clothing_brand;
+
+---what is the /sum/max brand value of items?
+
+
+SELECT SUM(Brand_Value) FROM clothing_brand;
+SELECT MAX(Brand_Value) as MAX FROM clothing_brand;
+
+---display the database ordered by Brand Values. 
+
+SELECT * FROM clothing_brand 
+ORDER BY Brand_Value desc;
+
+---display the database group by rates. 
+
+SELECT brand, rate FROM Clothing_brand 
+GROUP BY rate; 
